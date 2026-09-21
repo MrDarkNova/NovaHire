@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NovaHire — Job Tracker</title>
+  <meta name="description" content="Track applications, interviews, and offers in one board." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="kicker">Mr. Darknova</p>
+      <h1>NovaHire</h1>
+      <p class="sub">Track every application. No login. Data stays in this browser.</p>
+    </div>
+    <div class="actions">
+      <button type="button" id="exportBtn">Export JSON</button>
+      <button type="button" class="ghost" id="clearBtn">Clear board</button>
+    </div>
+  </header>
+
+  <form id="addForm" class="panel">
+    <input name="company" required placeholder="Company" />
+    <input name="role" required placeholder="Role" />
+    <input name="link" type="url" placeholder="Job URL" />
+    <select name="status">
+      <option value="saved">Saved</option>
+      <option value="applied" selected>Applied</option>
+      <option value="interview">Interview</option>
+      <option value="offer">Offer</option>
+      <option value="rejected">Rejected</option>
+    </select>
+    <input name="note" placeholder="Note" />
+    <button type="submit">Add job</button>
+  </form>
+
+  <section class="stats" id="stats"></section>
+  <section class="board" id="board"></section>
+
+  <footer>
+    Built as a hireable demo — localStorage only, ready for Vercel.
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

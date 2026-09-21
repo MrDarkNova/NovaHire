@@ -1,2 +1,5 @@
 # NovaHire
-Job application tracker for developers — statuses, notes, and export
+
+Job application tracker. Add roles, move them across Saved → Applied → Interview → Offer, export JSON.
+
+No backend. Deploy the repo root on Vercel.
