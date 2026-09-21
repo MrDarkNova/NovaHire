@@ -3,25 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NovaHire — Job Tracker</title>
+  <title>NovaHire — Track every application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="glow"></div>
   <header class="top">
-    <div>
-      <p class="kicker">Mr. Darknova</p>
-      <h1>NovaHire</h1>
-      <p class="sub">Track every application. No login. Data stays in this browser.</p>
+    <div class="brand">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <rect width="36" height="36" rx="10" fill="#7c5cfc"/>
+        <path d="M10 24V12h4l4 6 4-6h4v12h-3.2v-7.2L18.2 22h-.4L13.2 16.8V24H10z" fill="#fff"/>
+      </svg>
+      <div>
+        <p class="kicker">Mr. Darknova · hiring demo</p>
+        <h1>NovaHire</h1>
+      </div>
     </div>
+    <p class="lede">A kanban for roles you actually want. Local only. Export when you brief a recruiter.</p>
     <div class="actions">
-      <button type="button" id="exportBtn">Export JSON</button>
+      <button type="button" id="exportBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+        Export JSON
+      </button>
       <button type="button" class="ghost" id="clearBtn">Clear board</button>
     </div>
   </header>
   <form id="addForm" class="panel">
     <input name="company" required placeholder="Company" />
     <input name="role" required placeholder="Role" />
-    <input name="link" type="url" placeholder="https://listing-url" />
+    <input name="link" type="url" placeholder="https://listing" />
     <select name="status">
       <option value="saved">Saved</option>
       <option value="applied" selected>Applied</option>
@@ -34,7 +46,7 @@
   </form>
   <section class="stats" id="stats"></section>
   <section class="board" id="board"></section>
-  <footer>Built as a hireable demo — localStorage only.</footer>
+  <footer>Built to show product thinking · data stays in this browser</footer>
   <script src="app.js"></script>
 </body>
 </html>
